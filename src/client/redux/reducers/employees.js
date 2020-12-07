@@ -4,7 +4,6 @@ import {
     SET_IS_LOADING,
     SET_NEW_EMPLOYEE,
     SET_UPDATING_EMPLOYEE,
-    SET_SELECTED_EMPLOYEE,
     DELETE_EMPLOYEE
    } from '../actions/employees';
    
@@ -36,10 +35,10 @@ import {
          return {
            ...state,
            employees: state.employees.map((employee) => (
-             employee.id == action.payload.employee.id
+             employee.id == action.payload.employee[0].id
                ? action.payload.employee : employee)),
          };
-         
+
        case DELETE_EMPLOYEE:
          return {
            ...state,

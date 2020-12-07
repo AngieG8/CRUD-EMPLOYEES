@@ -98,13 +98,13 @@ export const createEmployee = ( employee ) => async (dispatch) => {
 
 
 export const updateEmployee = ( employee ) => async (dispatch) => {
+  const setEmployee = JSON.parse(employee)  
   dispatch(requester({
     requestType: 'put',
-    uri: `http://dummy.restapiexample.com/api/v1/update/${employee.id}`,
+    uri: `http://dummy.restapiexample.com/api/v1/update/${setEmployee.id}`,
     data: employee,
   }, (result) => {
-    console.log(result.data)
-    dispatch(setUpdatingEmployee({ employee : result.data }));
+    dispatch(setUpdatingEmployee({ employee : Object.keys(result.data) }));
     dispatch(setAlertMessage({
       alert: {
         message: 'Employee updating successfully',
@@ -119,7 +119,6 @@ export const requestDeleteEmployee = (employeeId) => async (dispatch) => {
     requestType: 'delete',
     uri: `http://dummy.restapiexample.com/api/v1/delete/${employeeId}`,
   }, () => {
-    console.log("aqui entro")
     dispatch(deleteEmployee({ employeeId }));
     dispatch(setAlertMessage({
       alert: {

@@ -1,0 +1,57 @@
+{
+  "name": "crud-employees",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "taskDefinition:stg": "ENV=stg node .github/actions/task-definition",
+    "taskDefinition:prod": "node .github/actions/task-definition",
+    "notification:stg": "ENV=stg node .github/actions/notification",
+    "notification:prod": "node .github/actions/notification"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngieG8/CRUD-EMPLOYEES.git"
+  },
+  "keywords": [],
+  "author": "Angie Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngieG8/CRUD-EMPLOYEES/issues"
+  },
+  "homepage": "https://github.com/AngieG8/CRUD-EMPLOYEES#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.9.11",
+    "@material-ui/lab": "^4.0.0-alpha.50",
+    "axios": "^0.19.2",
+    "clsx": "^1.1.0",
+    "cookie-parser": "^1.4.5",
+    "date-fns": "^2.12.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "material-table": "^1.69.2",
+    "next": "^9.3.5",
+    "next-cookies": "^2.0.3",
+    "next-offline": "^5.0.1",
+    "prop-types": "^15.7.2",
+    "react": "16.13.0",
+    "react-dom": "16.13.0",
+    "react-icons": "^3.10.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  }
+}

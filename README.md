@@ -1,7 +1,7 @@
 ## Crud Employees
 =================
 
-Aplicacion en React.js con un pequeño framework llamado Next.js para la implementacion  un CRUD completo que permita la visualización de los empleados de una empresa, con sus respectivos nombres, salarios y edad, eliminar y crear empleado.
+Aplicacion en React.js configurado con Next.js para la implementacion de un CRUD completo que permita la visualización de los empleados de una empresa, con sus respectivos nombres, salarios y edad, eliminar y crear empleado.
 
 ### Content ###
 Este proyecto tiene una rama principal ( main ) en la cual esta todo el desarollo propuesto.
